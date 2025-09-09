@@ -106,8 +106,8 @@ int main() {
     // Calcula o PIB per capta
     pibPerCapita_carta1 = pib_carta1 / (float) populacao_carta1;
 
-    // Exibe os valores do PIB per capta
-    printf("PIB per capta: %f\n", pibPerCapita_carta1);
+    // Exibe os valores do PIB per capita
+    printf("PIB per capita: %f\n", pibPerCapita_carta1);
 
     // Linha vazia
     printf("\n");
@@ -128,11 +128,11 @@ int main() {
     // Exibe os valores da densidade populacional
     printf("Densidade populacional: %f\n", densidadePopulacional_carta2);
 
-    // Calcula o PIB per capta
+    // Calcula o PIB per capita
     pibPerCapita_carta2 = pib_carta2 / (float) populacao_carta2;
 
-    // Exibe os valores do PIB per capta
-    printf("PIB per capta: %f\n", pibPerCapita_carta2);
+    // Exibe os valores do PIB per capita
+    printf("PIB per capita: %f\n", pibPerCapita_carta2);
 
     return 0;
 
