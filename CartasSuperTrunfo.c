@@ -12,6 +12,7 @@ int main() {
     int pontosTuristicos_carta1;
     float densidadePopulacional_carta1;
     float pibPerCapita_carta1;
+    float superPoderCarta1;
 
     // Variáveis da carta 2
     char estado_carta2;
@@ -23,7 +24,17 @@ int main() {
     int pontosTuristicos_carta2;
     float densidadePopulacional_carta2;
     float pibPerCapita_carta2;
+    float superPoderCarta2;
     
+    // Resultados
+    int resultadoPopulacao;
+    int resultadoArea;
+    int resultadoPib;
+    int resultadoPontosTuristicos;
+    int resultadoDensidadePopulacional;
+    int resultadoPibPerCapta;
+    int resultadoSuperPoder;
+
     // Cadastro carta 1
 
     // Código estado carta 1
@@ -97,7 +108,7 @@ int main() {
     printf("PIB: R$ %.2f\n", pib_carta1);
     printf("Número de pontos turísticos: %d\n", pontosTuristicos_carta1);
 
-    // Calcula a densidade popilacional
+    // Calcula a densidade populacional
     densidadePopulacional_carta1 = (float) populacao_carta1 / area_carta1;
 
     // Exibe os valores da densidade populacional
@@ -108,6 +119,10 @@ int main() {
 
     // Exibe os valores do PIB per capita
     printf("PIB per capita: %f\n", pibPerCapita_carta1);
+
+    // Calcula o super poder da carta 1
+    superPoderCarta1 = (float)populacao_carta1 + area_carta1 + pib_carta1 + (float)pontosTuristicos_carta1 + 
+    pibPerCapita_carta1 + (1/densidadePopulacional_carta1);
 
     // Linha vazia
     printf("\n");
@@ -122,7 +137,7 @@ int main() {
     printf("PIB: R$ %.2f\n", pib_carta2);
     printf("Número de pontos turísticos: %d\n", pontosTuristicos_carta2);
 
-    // Calcula a densidade popilacional
+    // Calcula a densidade populacional
     densidadePopulacional_carta2 = (float) populacao_carta2 / area_carta2;
 
     // Exibe os valores da densidade populacional
@@ -133,6 +148,93 @@ int main() {
 
     // Exibe os valores do PIB per capita
     printf("PIB per capita: %f\n", pibPerCapita_carta2);
+
+    // Calcula o super poder da carta 2
+    superPoderCarta2 = (float)populacao_carta2 + area_carta2 + pib_carta2 + (float)pontosTuristicos_carta2 + 
+    pibPerCapita_carta2 + (1/densidadePopulacional_carta2);
+
+     // Linha vazia
+    printf("\n");
+
+    //Comparação das cartas
+
+    resultadoPopulacao = populacao_carta1 > populacao_carta2;
+    resultadoArea = area_carta1 > area_carta2;
+    resultadoPib = pib_carta1 > pib_carta2;
+    resultadoPontosTuristicos = pontosTuristicos_carta1 > pontosTuristicos_carta2;
+    resultadoDensidadePopulacional = densidadePopulacional_carta1 < densidadePopulacional_carta2;
+    resultadoPibPerCapta = pibPerCapita_carta1 > pibPerCapita_carta2;
+    resultadoSuperPoder = superPoderCarta1 > superPoderCarta2;
+
+    // Apresentação dos resultados
+
+    printf("Comparação das cartas:\n");
+   
+    // Linha vazia
+    printf("\n");
+
+    // População
+
+    if (resultadoPopulacao = 1){
+        printf("População: A carta 1 venceu (%d)\n", resultadoPopulacao);
+    }
+    else {
+        printf("População: A carta 2 venceu (%d)\n", resultadoPopulacao);
+    }
+
+     // Área
+    
+    if (resultadoArea = 1){
+        printf("Área: A carta 1 venceu (%d)\n", resultadoArea);
+    }
+    else {
+        printf("Área: A carta 2 venceu (%d)\n", resultadoArea);
+    }
+
+     // PIB
+    
+    if (resultadoPib = 0){
+        printf("PIB: A carta 1 venceu (%d)\n", resultadoPib);
+    }
+    else {
+        printf("PIB: A carta 2 venceu (%d)\n", resultadoPib);
+    }
+
+    // Pontos turísticos
+    
+    if (resultadoPontosTuristicos = 0){
+        printf("Pontos Turísticos: A carta 1 venceu (%d)\n", resultadoPontosTuristicos);
+    }
+    else {
+        printf("Pontos Turísticos: A carta 2 venceu (%d)\n", resultadoPontosTuristicos);
+    }
+
+    // Densidade Populacional
+    
+    if (resultadoDensidadePopulacional = 0){
+        printf("Densidade Populacional: A carta 1 venceu (%d)\n", resultadoDensidadePopulacional);
+    }
+    else {
+        printf("Densidade Populacional: A carta 2 venceu (%d)\n", resultadoDensidadePopulacional);
+    }
+
+    // PIB per Capta
+    
+    if (resultadoPibPerCapta = 0){
+        printf("PIB per Capta: A carta 1 venceu (%d)\n", resultadoPibPerCapta);
+    }
+    else {
+        printf("PIB per Capta: A carta 2 venceu (%d)\n", resultadoPibPerCapta);
+    }
+
+    // Super Poder
+    
+    if (resultadoSuperPoder = 0){
+        printf("Super Poder: A carta 1 venceu (%d)\n", resultadoSuperPoder);
+    }
+    else {
+        printf("Super Poder: A carta 2 venceu (%d)\n", resultadoSuperPoder);
+    }
 
     return 0;
 
